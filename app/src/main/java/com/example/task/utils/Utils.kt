@@ -1,5 +1,7 @@
 package com.example.task.utils
 
+import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -55,4 +57,21 @@ object Utils {
         Log.e(TAG, error!!)
     }
 
+    fun ProgressDialog(context: Context, text: String): ProgressDialog {
+        val progressDialog = ProgressDialog(context)
+        progressDialog.setMessage(text)
+        progressDialog.setCancelable(false)
+        progressDialog.show()
+        return progressDialog
+    }
+
+    fun dismissDialog(activity: Activity, pd: ProgressDialog?) {
+        activity.runOnUiThread {
+            if (pd != null) {
+                if (pd.isShowing) {
+                    pd.dismiss()
+                }
+            }
+        }
+    }
 }

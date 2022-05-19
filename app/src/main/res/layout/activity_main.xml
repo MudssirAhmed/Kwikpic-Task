@@ -10,15 +10,23 @@
         android:id="@+id/btn_mainActivity_pickImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick Image"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:text="Pick Image" />
+
+    <Button
+        android:id="@+id/btn_mainActivity_compressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:text="Compress" />
 
     <ImageView
         android:id="@+id/iv_mainActivity_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"/>
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
